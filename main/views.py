@@ -1,9 +1,9 @@
 from django.shortcuts import render
-
+from .models import Portfolio
 def index(request):
-
-    return render(request, 'index.html')
+    save_model = Portfolio.objects.all()
+    return render(request, 'index.html', {"save_model":save_model})
 
 
 def order_form(request):
-    pass
+    return render(request, 'order-form.html')

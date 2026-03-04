@@ -16,7 +16,7 @@
 <aside>
     <img src="{% static 'main/img/bird.svg' %}" alt="Лого">
     <span class="logo">
-        <span class="highlight">E</span>mbird<span class="highlight">P</span>rojects
+        <span class="highlight"></span>mbird<span class="highlight">P</span>rojects
     </span>
 
     <ul>
@@ -48,9 +48,39 @@
     </ul>
 </aside>
 
-{% block content %}{% endblock %}
+<main>
+    <h1>Мои проекты</h1>
+    <p>Здесь представлены работы, которые я создал для моих клиентов.</p>
 
+    <!-- Блок с карточками для выбора услуги -->
+    <section class="services">
+        <h2>Что я предлагаю</h2>
+        <p>Клиенты могут заказать уникальные проекты с вышивкой по фото или восстановление одежды.</p>
 
+        <div class="service-cards">
+            <!-- Карточка 1: Вышивка по фото -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <img src="{% static 'main/img/pophoto.jpg' %}" alt="Вышивка по фото">
+                <h3>Вышивка по фото</h3>
+                <p>Индивидуальный дизайн для ваших фотографий.</p>
+            </div>
+
+            <!-- Карточка 2: Создание персональной вышивки -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="{% static 'main/img/disign.jpg' %}" alt="main/img/service1.jpg">
+                <h3>Создание персональной вышивки</h3>
+                <p>Персонализированные вышивки под ваш стиль.</p>
+            </div>
+
+            <!-- Карточка 3: Восстановление одежды -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                <img src="{% static 'main/img/potertosti.jpg' %}" alt="Восстановление одежды">
+                <h3>Восстановление одежды</h3>
+                <p>Восстановление одежды с уникальными вышивками для покрытия дыр и потертостей.</p>
+            </div>
+        </div>
+    </section>
+</main>
 
 <!-- Подключаем JS для анимаций -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
