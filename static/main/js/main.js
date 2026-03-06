@@ -55,3 +55,12 @@ portfolioBtn.addEventListener('click', function (e) {
     // Прячем форму для заказа
     orderForm.style.display = 'none';
 });
+
+
+function openModal(categoryId){
+    fetch(`/get-category-izdeliya/${categoryId}`)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data)
+    });
+}

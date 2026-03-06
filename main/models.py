@@ -4,6 +4,7 @@ class Category(models.Model):
     name = models.CharField(verbose_name="Вид работы")
     img = models.ImageField(upload_to="category_img1", verbose_name="Фотография", default=None, blank= True)
     description = models.TextField(verbose_name='Описание', default=None,blank= True)
+    order = models.IntegerField(verbose_name="Порядок сортировки", default= 0)
 
     def __str__(self):
         return self.name

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.6.0/css/all.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
+ {% block extra_css %}{% endblock %}
 </head>
 
 <body>
@@ -21,7 +22,7 @@
 
     <ul>
         <!-- Кнопка Портфолио -->
-        <a href="#" class="active">
+        <a href="/" class="active">
             <li><i class="fa-solid fa-star"></i> Портфолио</li>
         </a>
 
@@ -69,5 +70,6 @@
     });
 </script>
 
+ {% block extra_js %}{% endblock %}
 </body>
 </html>

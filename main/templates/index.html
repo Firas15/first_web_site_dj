@@ -19,28 +19,30 @@
 
         <div class="service-cards">
             <!-- Карточка 1: Вышивка по фото -->
-
-            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                <img src="{% static 'main/img/pophoto.jpg' %}" alt="Вышивка по фото">
-                <h3>Вышивка по фото</h3>
-                <p>Индивидуальный дизайн для ваших фотографий.</p>
+            {% for i in categories %}
+            <div class="service-card" data-aos="fade-up" onclick="openModal('{{i.id}}')" data-aos-delay="100">
+                <img src="{{i.img.url}}" alt="{{i.name}}">
+                <h3>{{i.name}}</h3>
+                <p>{{i.description}}</p>
             </div>
+            {% endfor %}
 
             <!-- Карточка 2: Создание персональной вышивки -->
-            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <!--<div class="service-card" data-aos="fade-up" data-aos-delay="200">
                 <img src="{% static 'main/img/disign.jpg' %}" alt="main/img/service1.jpg">
                 <h3>Создание персональной вышивки</h3>
                 <p>Персонализированные вышивки под ваш стиль.</p>
-            </div>
+            </div>-->
 
             <!-- Карточка 3: Восстановление одежды -->
-            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+            <!--<div class="service-card" data-aos="fade-up" data-aos-delay="300">
                 <img src="{% static 'main/img/potertosti.jpg' %}" alt="Восстановление одежды">
                 <h3>Восстановление одежды</h3>
                 <p>Восстановление одежды с уникальными вышивками для покрытия дыр и потертостей.</p>
-            </div>
+            </div>-->
         </div>
     </section>
 </main>
+
 
 {% endblock %}
